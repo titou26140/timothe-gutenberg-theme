@@ -37,7 +37,7 @@
     "node": ">= 8.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.0.1",
+    "autoprefixer": "^9.8.6",
     "browser-sync": "^2.26.13",
     "browsersync-webpack-plugin": "^0.6.0",
     "bs-html-injector": "~3.0",
@@ -57,7 +57,6 @@
     "imagemin-webpack-plugin": "^2.4.2",
     "import-glob": "~1.5",
     "node-sass": "^5.0.0",
-    "postcss-loader": "^4.0.4",
     "postcss-safe-parser": "^5.0.2",
     "resolve-url-loader": "^3.1.2",
     "rimraf": "^3.0.2",
@@ -77,6 +76,7 @@
     "yargs": "^16.1.0"
   },
   "dependencies": {
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "postcss-loader": "~3.0.0"
   }
 }
