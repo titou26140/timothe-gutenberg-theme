@@ -18,11 +18,6 @@ const globalStyles = ({ addBase, config }) => {
     a: {
       color: config('theme.textColor.primary'),
       textDecoration: 'none',
-      borderBottom: '1px solid transparent',
-      transition: '0.2s ease',
-    },
-    'a:hover': {
-      borderColor: config('theme.borderColor.primary'),
     },
     p: {
       marginBottom: config('theme.margin.3'),
