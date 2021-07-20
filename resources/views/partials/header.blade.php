@@ -1,9 +1,9 @@
-<header id="heading-bar">
+<header id="heading-bar" class="z-10">
 
     <!-- This example requires Tailwind CSS v2.0+ -->
     <nav class="bg-gray-800">
         <div class="container">
-            <div class="max-w-7xl mx-auto ">
+            <div class="own-container-without-y">
                 <div class="relative flex items-center justify-between h-16">
                     <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                         <!-- Mobile menu button-->

@@ -16,3 +16,31 @@ body {
 #full-footer {
   flex-shrink: 0;
 }
+
+.own-container {
+  @apply max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8;
+}
+
+.own-container-without-y {
+  @apply max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl;
+}
+
+a {
+  @apply text-primary outline-none;
+}
+
+p {
+  @apply text-lg text-gray-500 my-4;
+}
+
+h3 {
+  @apply text-xl font-bold mb-4;
+}
+
+h2 {
+  @apply text-3xl font-bold mb-4;
+}
+
+h1 {
+  @apply text-5xl font-bold mb-4;
+}

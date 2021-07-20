@@ -17,12 +17,12 @@
   @apply block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-700 border border-gray-500 rounded;
 
   &:focus {
-    @apply shadow-outline;
+    @apply shadow;
   }
 }
 
 .comment-form input[type="submit"] {
-  @apply btn bg-gray-600;
+  @apply bg-gray-600;
 
   &:hover {
     @apply bg-gray-700;
