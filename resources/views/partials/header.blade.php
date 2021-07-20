@@ -1,4 +1,4 @@
-<header class="banner">
+<header id="heading-bar">
 
     <!-- This example requires Tailwind CSS v2.0+ -->
     <nav class="bg-gray-800">
@@ -99,6 +99,10 @@
                                         class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
                                         id="user-menu-item-0">Mon profil</a>
 
+                                    <a href="{{ admin_url('profile.php') }}"
+                                        class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                                        id="user-menu-item-0">Tableau de bord</a>
+
                                     {{-- Se déconnecter --}}
 
                                     <a href="{{ wp_logout_url(home_url()) }}"
@@ -134,3 +138,9 @@
     </nav>
 
 </header>
+
+@push('scripts')
+    <script>
+        console.log('oui');
+    </script>
+@endpush

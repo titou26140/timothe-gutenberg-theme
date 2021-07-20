@@ -13,10 +13,10 @@ let postcssPlugins = [
 /** Add cssnano when optimizing */
 config.enabled.optimize
   ? postcssPlugins.push(
-      require('cssnano')({
-        preset: ['default', { discardComments: { removeAll: true } }],
-      })
-    )
+    require('cssnano')({
+      preset: ['default', { discardComments: { removeAll: true } }],
+    })
+  )
   : false;
 
 module.exports = {
@@ -33,11 +33,13 @@ module.exports = {
             {
               loader: 'postcss',
               options: {
-                parser: config.enabled.optimize
-                  ? 'postcss-safe-parser'
-                  : undefined,
-                plugins: postcssPlugins,
-                sourceMap: false,
+                postcssOptions: {
+                  parser: config.enabled.optimize
+                    ? 'postcss-safe-parser'
+                    : undefined,
+                  plugins: postcssPlugins,
+                  sourceMap: false,
+                }
               },
             },
             {

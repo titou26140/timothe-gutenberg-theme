@@ -1,0 +1,22 @@
+#footer {
+  @apply bg-gray-800 text-white;
+
+  section {
+    .search-form {
+      display: block;
+    }
+
+    a {
+      @apply text-white;
+
+      &:hover {
+        @apply text-primary;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+  }
+}
