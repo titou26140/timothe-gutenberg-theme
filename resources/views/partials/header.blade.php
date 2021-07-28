@@ -9,7 +9,7 @@
                         <!-- Mobile menu button-->
                         <button type="button"
                             class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                            aria-controls="mobile-menu" aria-expanded="false">
+                            aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
                             <span class="sr-only">Open main menu</span>
                             <!--
             Icon when menu is closed.
@@ -67,9 +67,9 @@
                             <!-- Profile dropdown -->
                             <div class="ml-3 relative">
                                 <div>
-                                    <button type="button"
+                                    <button type="button" id="popup-menu-button"
                                         class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                                        id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                        id="user-menu-button" aria-expanded="true" aria-haspopup="true">
                                         <span class="sr-only">Open user menu</span>
                                         <img class="h-8 w-8 rounded-full"
                                             src="{{ get_avatar_url(get_current_user_id()) }}" alt="">
@@ -90,7 +90,8 @@
               From: "transform opacity-100 scale-100"
               To: "transform opacity-0 scale-95"
           -->
-                                <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                                <div id="popup-menu"
+                                    class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
                                     role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
                                     tabindex="-1">
                                     <!-- Active: "bg-gray-100", Not Active: "" -->
@@ -118,7 +119,7 @@
             </div>
 
             <!-- Mobile menu, show/hide based on menu state. -->
-            <div class="sm:hidden" id="mobile-menu">
+            <div class="sm:hidden hidden" id="mobile-menu">
                 <div class="px-2 pt-2 pb-3 space-y-1">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                     <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
@@ -138,9 +139,3 @@
     </nav>
 
 </header>
-
-@push('scripts')
-    <script>
-        console.log('oui');
-    </script>
-@endpush
